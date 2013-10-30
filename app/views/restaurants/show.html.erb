@@ -6,8 +6,11 @@
 	</header>
 	<div>
 		<p><%= image_tag @restaurant.image_url(:masthead) %></p>
+		<h5>Address</h5>
 		<p><%= @restaurant.address %></p>
+		<h5>Phone</h5>
 		<p><%= @restaurant.phone_number %></p>
+		<p><%= image_tag "http://maps.google.com/maps/api/staticmap?visual_refresh=true&size=450x300&sensor=false&zoom=16&markers=#{@restaurant.address}" %></p>
 	</div>
 	<p>
 		<%= link_to 'edit', edit_restaurant_path(@restaurant) %> |
