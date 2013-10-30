@@ -1,0 +1,16 @@
+<h1>All Restaurants</h1>
+
+<section>
+	<%= link_to 'add new restaurant', new_restaurant_path, class: 'btn btn-default' %>
+</section>
+
+<section>
+<% @restaurants.each do |rest| %>
+	<article>
+		<header>
+			<h2><%= link_to rest.name, rest %></h2>
+		</header>
+		<p><%= rest.description %></p>
+	</article>
+<% end %>
+</section>

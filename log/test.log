@@ -1,0 +1,332 @@
+  [1m[36m (1.5ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:28:09', '2013-10-29 19:28:09', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:28:09', '2013-10-29 19:28:09', 298486374)[0m
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 200 OK in 617ms (Views: 615.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:29:56', '2013-10-29 19:29:56', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:29:56', '2013-10-29 19:29:56', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 200 OK in 64ms (Views: 63.5ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:34:29', '2013-10-29 19:34:29', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:34:29', '2013-10-29 19:34:29', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 200 OK in 63ms (Views: 62.9ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:38:12', '2013-10-29 19:38:12', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:38:12', '2013-10-29 19:38:12', 298486374)[0m
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 200 OK in 67ms (Views: 66.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:46:34', '2013-10-29 19:46:34', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:46:34', '2013-10-29 19:46:34', 298486374)[0m
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 1ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+Processing by RestaurantsController#destroy as HTML
+Completed 404 Not Found in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+Processing by RestaurantsController#edit as HTML
+Completed 404 Not Found in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 500 Internal Server Error in 65ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 500 Internal Server Error in 10ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+Processing by RestaurantsController#show as HTML
+Completed 404 Not Found in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+Processing by RestaurantsController#update as HTML
+Completed 404 Not Found in 0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "restaurants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "description" text, "address" text, "phone_number" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131029183407')[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "restaurants"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:46:52', '2013-10-29 19:46:52', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "restaurants" ("name", "description", "address", "phone_number", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyText', 1, '2013-10-29 19:46:52', '2013-10-29 19:46:52', 298486374)[0m
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_create
+-------------------------------------------------
+Processing by RestaurantsController#create as HTML
+Completed 400 Bad Request in 0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+RestaurantsControllerTest: test_should_get_destroy
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_edit
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+RestaurantsControllerTest: test_should_get_index
+------------------------------------------------
+Processing by RestaurantsController#index as HTML
+  [1m[35mRestaurant Load (0.2ms)[0m  SELECT "restaurants".* FROM "restaurants"
+Completed 200 OK in 69ms (Views: 68.7ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+----------------------------------------------
+RestaurantsControllerTest: test_should_get_new
+----------------------------------------------
+Processing by RestaurantsController#new as HTML
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-----------------------------------------------
+RestaurantsControllerTest: test_should_get_show
+-----------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+-------------------------------------------------
+RestaurantsControllerTest: test_should_get_update
+-------------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

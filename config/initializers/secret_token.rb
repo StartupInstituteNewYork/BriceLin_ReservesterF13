@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RestaurantApp::Application.config.secret_key_base = '11b850f78317cac7152337c8eeae8f7f53b2ff304c6fd7af1b54826ca816ea883c36c0cdde3f7d7757ae5035c969cc827949b4b200a1ba4d33352d7478abebbc'
+BriceReservester::Application.config.secret_key_base = '3da4c7838155a87ab429f63630776d5ddf29005e885ee25b0c83cf2156e3ff94f735853a65130254f602644ccbc684de58cca5db508c84480db8beab6432f81e'
