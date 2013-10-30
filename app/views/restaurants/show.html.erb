@@ -5,6 +5,7 @@
 		<p><%= @restaurant.description %></p>
 	</header>
 	<div>
+		<p><%= image_tag @restaurant.image_url(:masthead) %></p>
 		<p><%= @restaurant.address %></p>
 		<p><%= @restaurant.phone_number %></p>
 	</div>
