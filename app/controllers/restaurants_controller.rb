@@ -27,7 +27,7 @@ class RestaurantsController < ApplicationController
   def update
     @restaurant = Restaurant.find(params[:id])
     if @restaurant.update(restaurant_params)
-      redirect_to root_url, notice: "#{@restaurant.name was successfully updated!}"
+      redirect_to root_url, notice: "#{@restaurant.name} was successfully updated!"
     else
       render :edit
     end
@@ -42,6 +42,6 @@ class RestaurantsController < ApplicationController
 private
   
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :address, :phone_number)
+    params.require(:restaurant).permit(:name, :description, :address, :phone_number, :image)
   end
 end

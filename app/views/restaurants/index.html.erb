@@ -10,6 +10,7 @@
 		<header>
 			<h2><%= link_to rest.name, rest %></h2>
 		</header>
+		<p><%= image_tag rest.image_url(:thumb) if rest.image? %></p>
 		<p><%= rest.description %></p>
 	</article>
 <% end %>
