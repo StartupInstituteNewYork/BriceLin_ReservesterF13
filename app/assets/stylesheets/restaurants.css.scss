@@ -1,3 +1,22 @@
 // Place all the styles related to the restaurants controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	text-align: center;
+}
+.restaurant-wrap {
+	float: left;
+	padding: 10px;
+	margin: 1% 2%;
+	img {
+		width: 300px;
+		border-radius: 10px;
+	}
+	height: 300px;
+	border-radius: 15px;
+	box-shadow: 1px 1px 10px #6c6c6c;
+}
+#add-new-restaurant {
+	margin: 15px;
+}

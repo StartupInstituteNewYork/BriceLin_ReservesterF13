@@ -1,17 +1,19 @@
-<h1>All Restaurants</h1>
-
-<section>
+<section id="add-new-restaurant">
 	<%= link_to 'add new restaurant', new_restaurant_path, class: 'btn btn-default' %>
 </section>
 
-<section>
+<section id="restaurants">
+
+
 <% @restaurants.each do |rest| %>
-	<article>
-		<header>
-			<h2><%= link_to rest.name, rest %></h2>
-		</header>
-		<p><%= image_tag rest.image_url(:thumb) if rest.image? %></p>
-		<p><%= rest.description %></p>
-	</article>
+    <div class="restaurant-wrap">
+      <%= image_tag rest.image_url(:thumb) if rest.image %>
+      <div class="caption">
+        <h3><%= link_to rest.name, rest %></h3>
+        <p><%= rest.description %></p>
+      </div>
+    </div>
 <% end %>
+
 </section>
+
