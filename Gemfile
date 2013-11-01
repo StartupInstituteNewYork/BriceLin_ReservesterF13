@@ -3,6 +3,7 @@ gem 'rails', '4.0.0'
 gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
 gem 'rmagick'
+gem 'fog', '~> 1.3.1'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
