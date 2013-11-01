@@ -6,7 +6,7 @@ gem 'twitter-bootstrap-rails'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog', '~> 1.3.1'
-gem 'aws-sdk', '~> 1.0git'
+gem 'aws-sdk', '~> 1.0'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
