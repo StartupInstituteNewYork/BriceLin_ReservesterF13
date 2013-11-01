@@ -9,7 +9,7 @@ gem 'fog', '~> 1.3.1'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
-	gem 'sqlite3'
+	gem 'mysql2'
 	gem 'dotenv-rails'
 end
 
