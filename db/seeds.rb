@@ -10,26 +10,20 @@ Restaurant.create!([
 	{
 		name: 'Pizza Place',
 		description: 'Fresh hot cheesy pizza!',
-		address: '123 Street',
+		address: '1 Pennsylvania Plaza New York',
 		phone_number: 123_123_1234
 	},
 	{
 		name: 'Big Burger',
-		description: 'Big burgers!',
-		address: '124 Street',
+		description: 'Best burger in the financial district!',
+		address: '160 Broadway New York',
 		phone_number: 123_133_1234
 	},
 	{
 		name: 'Chillin\' Chilis',
 		description: 'Fresh chili!',
-		address: '1243 Street',
+		address: '425 Washington Blvd  Jersey City, NJ 07310',
 		phone_number: 113_123_1234
-	},
-	{
-		name: 'Super Soup',
-		description: 'Fresh soup!',
-		address: '123 Ave',
-		phone_number: 323_123_1234
 	},
 	{
 		name: 'Luscious Lasagna',
@@ -40,7 +34,7 @@ Restaurant.create!([
 	{
 		name: 'Slurpin\' Spaghetti',
 		description: 'Fresh spaghetti!',
-		address: '1243 Street',
+		address: '696 Avenue of the Americas New York',
 		phone_number: 193_123_1234
 	}
 ])
