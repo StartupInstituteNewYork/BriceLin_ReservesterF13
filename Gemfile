@@ -7,6 +7,7 @@ gem 'rmagick'
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'sqlite3'
+	gem 'dotenv-rails'
 end
 
 group :production do
