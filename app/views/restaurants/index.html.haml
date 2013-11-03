@@ -1,0 +1,14 @@
+%section#add-new-restaurant
+  = link_to 'add new restaurant', new_restaurant_path, class: 'btn btn-default'
+
+%section#restaurants
+
+  - @restaurants.each do |rest|
+    .restaurant-wrap
+      = image_tag rest.image_url(:thumb) if rest.image
+      .caption
+        %h3= link_to rest.name, rest
+        %p= rest.description
+
+
+

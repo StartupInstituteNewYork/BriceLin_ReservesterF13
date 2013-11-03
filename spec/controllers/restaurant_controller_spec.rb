@@ -6,10 +6,6 @@ describe RestaurantsController do
 			get :index
 			expect(response).to be_success
 			expect(response.status).to eq(200)
-		end
-
-		it "renders index template" do
-			get :index
 			expect(response).to render_template("index")
 		end
 	end
@@ -19,10 +15,6 @@ describe RestaurantsController do
 			get :new
 			expect(response).to be_success
 			expect(response.status).to eq(200)
-		end
-
-		it "renders index template" do
-			get :new
 			expect(response).to render_template("new")
 		end
 	end
