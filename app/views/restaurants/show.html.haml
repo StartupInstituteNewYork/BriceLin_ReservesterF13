@@ -10,7 +10,7 @@
 		%p= @restaurant.address
 		%h5 Phone
 		%p= @restaurant.phone_number
-		%p= image_tag "http://maps.google.com/maps/api/staticmap?visual_refresh=true&size=450x300&sensor=false&zoom=16&markers=#{@restaurant.address}"
+		%p= image_tag find_on_google_map(@restaurant)
 	%p
 		= link_to 'edit', edit_restaurant_path(@restaurant)
 		|
