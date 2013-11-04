@@ -5,6 +5,7 @@
 		%p= @restaurant.description
 	%div
 		%p= image_tag @restaurant.image_url(:masthead)
+		%h5= link_to 'Download our menu!', @restaurant.menu_url, target: '_blank'
 		%h5 Address
 		%p= @restaurant.address
 		%h5 Phone
