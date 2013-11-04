@@ -12,6 +12,14 @@ group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
 	gem 'mysql2'
 	gem 'dotenv-rails'
+	gem 'factory_girl_rails'
+end
+
+group :test do 
+	gem 'faker' 
+	gem 'capybara' 
+	gem 'guard-rspec' 
+	gem 'launchy' 
 end
 
 group :production do
@@ -27,5 +35,6 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 
-group :doc do  gem 'sdoc', require: false
+group :doc do  
+	gem 'sdoc', require: false
 end
