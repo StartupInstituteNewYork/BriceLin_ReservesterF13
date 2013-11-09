@@ -2,13 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* GENERAL */
 body {
 	text-align: center;
 }
 li {
 	list-style: none;
 }
-
+ul {
+	display: inline;
+}
 /* HEADER */
 .navbar-brand {
 	text-transform: uppercase;
@@ -26,19 +29,28 @@ li {
 	border-radius: 15px;
 	box-shadow: 1px 1px 10px #6c6c6c;
 }
+/* CONTAINER */
+.container.main {
+	margin-top: 80px;
+}
 #add-new-restaurant {
 	margin: 15px;
-}
-ul {
-	display: inline;
 }
 .form {
 	width: 70%;
 	margin: 10px auto;
 }
+/* PARSLEY.JS */
 .parsley-error-list {
 	padding: 0;
 }
+/* ERRORS */
 #error_explanation {
 	color: red;
+}
+
+@media only screen and (max-width: 500px) {
+	.restaurant-wrap {
+		width: 95%;
+	}
 }
