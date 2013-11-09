@@ -1,4 +1,7 @@
 class RestaurantsController < ApplicationController
+  before_action :authenticate_owner!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :confirm_ownership, only: [:edit, :update, :destroy]
+
   def index
     @restaurants = Restaurant.all
   end
@@ -8,7 +11,7 @@ class RestaurantsController < ApplicationController
   end
 
   def create
-    @restaurant = Restaurant.new(restaurant_params)
+    @restaurant = current_owner.restaurants.build(restaurant_params)
     if @restaurant.save
       redirect_to root_url, notice: "#{@restaurant.name} was successfully created!"
     else
@@ -42,6 +45,13 @@ class RestaurantsController < ApplicationController
 private
   
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :address, :phone_number, :image, :menu)
+    params.require(:restaurant).permit(:owner_id, :name, :description, :address, :phone_number, :image, :menu)
+  end
+
+  def confirm_ownership
+    restaurant = Restaurant.find(params[:id])
+    if restaurant.owner != current_owner
+      redirect_to :show, notice: "You don't own this restaurant!"
+    end
   end
 end

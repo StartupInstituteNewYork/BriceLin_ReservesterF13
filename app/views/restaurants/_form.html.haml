@@ -1,26 +1,27 @@
-= form_for @restaurant do |f|
-	%fieldset
-		%p
+= form_for @restaurant, data:{validate: 'parsley'}, novalidate: 'novalidate' do |f|
+	= render 'shared/error_messages', object: f.object
+	%fieldset.form
+		.form-group
 			= f.label :name
-			= f.text_field :name, autofocus: true
-		%p
+			= f.text_field :name, autofocus: true, data:{required: 'true'}, class: 'form-control'
+		.form-group
 			= f.label :description
-			= f.text_area :description
-		%p
+			= f.text_area :description, class: 'form-control'
+		.form-group
 			= f.label :address
-			= f.text_area :address
-		%p
+			= f.text_area :address, data:{required: 'true'}, class: 'form-control', class: 'form-control'
+		.form-group
 			= f.label :phone_number
-			= f.text_field :phone_number
-		%p
+			= f.text_field :phone_number, data:{type: 'phone'}, class: 'form-control'
+		.form-group
 			= f.label :image
 			= image_tag @restaurant.image_url(:thumb) if @restaurant.image?
-			= f.file_field :image
+			= f.file_field :image, class: 'form-control'
 			= f.hidden_field :image_cache
-		%p
+		.form-group
 			= f.label :menu
-			= f.file_field :menu
+			= f.file_field :menu, class: 'form-control'
 			= f.hidden_field :menu_cache
-		%p
+		.form-group
 			= f.submit class: 'btn btn-primary'
 			= link_to 'Cancel', root_path

@@ -5,6 +5,14 @@
 body {
 	text-align: center;
 }
+li {
+	list-style: none;
+}
+
+/* HEADER */
+.navbar-brand {
+	text-transform: uppercase;
+}
 .restaurant-wrap {
 	float: left;
 	padding: 10px;
@@ -20,4 +28,17 @@ body {
 }
 #add-new-restaurant {
 	margin: 15px;
+}
+ul {
+	display: inline;
+}
+.form {
+	width: 70%;
+	margin: 10px auto;
+}
+.parsley-error-list {
+	padding: 0;
+}
+#error_explanation {
+	color: red;
 }
