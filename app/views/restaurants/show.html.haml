@@ -14,8 +14,23 @@
 		%h5 Phone
 		%p= @restaurant.phone_number
 		%p= image_tag find_on_google_map(@restaurant)
+		= form_for [@restaurant, @reservation] do |res|
+			= render 'shared/error_messages', object: res.object
+			%fieldset.form
+				%legend Make a Reservation!
+				.form-group
+					= res.label :email
+					= res.text_field :email, class: 'form-control'
+				.form-group
+					= res.label :res_date
+					= res.datetime_field :res_date, class: 'form-control'
+				.form-group
+					= res.label :message
+					= res.text_area :message, class: 'form-control'
+				.form-group
+					= res.submit class: 'btn btn-primary'
 	%p
-		- if current_owner.owns?(@restaurant)
+		- if current_owner && current_owner.owns?(@restaurant)
 			= link_to 'edit', edit_restaurant_path(@restaurant)
 			|
 			= link_to 'delete', @restaurant, method: :delete, data: { confirm: 'Are you sure you want to delete this pipe?' }
