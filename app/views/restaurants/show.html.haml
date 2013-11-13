@@ -31,6 +31,17 @@
 					= res.submit class: 'btn btn-primary'
 	%p
 		- if current_owner && current_owner.owns?(@restaurant)
+			- if @restaurant.reservations.any?
+				.reservations
+					%h3 Reservations
+					%ol
+					- @restaurant.reservations.each do |res|
+						%li
+							%p Name: #{ res.email }
+							%p Date: #{ res.res_date }
+							%p Note: #{ res.message }
+							%p= link_to 'delete reservation', [@restaurant, res], method: :delete, data: { confirm: 'Sure you want to delete this reservation?'}
+						
 			= link_to 'edit', edit_restaurant_path(@restaurant)
 			|
 			= link_to 'delete', @restaurant, method: :delete, data: { confirm: 'Are you sure you want to delete this pipe?' }

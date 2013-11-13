@@ -11,6 +11,13 @@ class ReservationsController < ApplicationController
   end
 
   def destroy
+    @restaurant = Restaurant.find(params[:restaurant_id])
+    @reservation = @restaurant.reservations.find_by(id: params[:id])
+    if @reservation.destroy
+      redirect_to @restaurant, notice: 'Reservation successfully deleted'
+    else
+      redirect_to @restaurant, notice: 'There was an error deleting the reservation'
+    end
   end
 
 private
