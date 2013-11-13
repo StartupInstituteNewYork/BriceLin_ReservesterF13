@@ -4,6 +4,7 @@ class ReservationsController < ApplicationController
   	@reservation = @restaurant.reservations.build(reservation_params)
 
   	if @reservation.save
+      ReservationMailer.reservation_notification(@reservation).deliver
   		redirect_to :back, notice: "Reservation made!"
   	else
   		redirect_to :back, notice: "Error creating reservation!"
