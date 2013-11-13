@@ -16,10 +16,6 @@
 		%p= image_tag find_on_google_map(@restaurant)
 		= form_for [@restaurant, @reservation] do |res|
 			= render 'shared/error_messages', object: res.object
-			- if res.object.errors.any?
-				%ul
-				- res.object.errors.full_messages.each do |msg|
-					%li= msg
 			%fieldset.form
 				%legend Make a Reservation!
 				.form-group
@@ -27,7 +23,7 @@
 					= res.text_field :email, class: 'form-control'
 				.form-group
 					= res.label :res_date
-					= res.datetime_field :res_date, class: 'form-control'
+					= res.datetime_local_field :res_date, class: 'form-control'
 				.form-group
 					= res.label :message
 					= res.text_area :message, class: 'form-control'
