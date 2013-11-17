@@ -28,6 +28,8 @@
 					= res.label :message
 					= res.text_area :message, class: 'form-control'
 				.form-group
+					= recaptcha_tags
+				.form-group
 					= res.submit class: 'btn btn-primary'
 	%p
 		- if current_owner && current_owner.owns?(@restaurant)

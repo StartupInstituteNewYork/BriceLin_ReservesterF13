@@ -27,7 +27,7 @@ ul {
 	}
 	height: 300px;
 	border-radius: 15px;
-	box-shadow: 1px 1px 10px #6c6c6c;
+	box-shadow: 1px 1px 5px #8c8c8c;
 }
 /* CONTAINER */
 .container.main {
@@ -52,5 +52,15 @@ ul {
 @media only screen and (max-width: 500px) {
 	.restaurant-wrap {
 		width: 95%;
+		font-size: 80%;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	.restaurant-wrap {
+		width: 95%;
+		img {
+			width: 100%;
+		}
 	}
 }

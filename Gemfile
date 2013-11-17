@@ -8,6 +8,7 @@ gem 'fog', '~> 1.3.1'
 gem 'haml'
 gem 'devise'
 gem 'parsley-rails'
+gem "recaptcha", :require => "recaptcha/rails"
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'

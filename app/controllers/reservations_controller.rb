@@ -3,12 +3,16 @@ class ReservationsController < ApplicationController
     @restaurant = Restaurant.find(params[:restaurant_id])
   	@reservation = @restaurant.reservations.build(reservation_params)
 
-  	if @reservation.save
-      ReservationMailer.reservation_notification(@reservation).deliver
-  		redirect_to :back, notice: "Reservation made!"
-  	else
-  		redirect_to :back, notice: "Error creating reservation!"
-  	end
+    if verify_recaptcha
+    	if @reservation.save
+        ReservationMailer.reservation_notification(@reservation).deliver
+    		redirect_to :back, notice: "Reservation made!"
+    	else
+    		redirect_to :back, notice: "Error creating reservation!"
+    	end
+    else
+      redirect_to :back
+    end
   end
 
   def destroy
