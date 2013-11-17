@@ -1,0 +1,5 @@
+%h1 #{current_owner.name}'s Dashboard
+
+.restaurants
+	- @restaurants.each do |rest|
+		%p= rest.name
