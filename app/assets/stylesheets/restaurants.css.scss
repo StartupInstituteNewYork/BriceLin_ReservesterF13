@@ -12,10 +12,17 @@ li {
 ul {
 	display: inline;
 }
+ol {
+	padding: 0;
+}
 /* HEADER */
+nav.navbar {
+	padding: 0 50px;
+}
 .navbar-brand {
 	text-transform: uppercase;
 }
+/* CONTAINER */
 .restaurant-wrap {
 	float: left;
 	padding: 10px;
@@ -28,13 +35,6 @@ ul {
 	height: 300px;
 	border-radius: 15px;
 	box-shadow: 1px 1px 5px #8c8c8c;
-}
-/* CONTAINER */
-.container.main {
-	margin-top: 80px;
-}
-#add-new-restaurant {
-	margin: 15px;
 }
 .form {
 	width: 70%;
@@ -50,6 +50,9 @@ ul {
 }
 
 @media only screen and (max-width: 500px) {
+	nav.navbar {
+		padding: 0 10px;
+	}
 	.restaurant-wrap {
 		width: 95%;
 		font-size: 80%;

@@ -3,7 +3,7 @@ class Restaurant < ActiveRecord::Base
 	has_many :reservations, dependent: :destroy
 	#accepts_nested_attributes_for :reservations, allow_destroy: true
 
-	validates :name, :address, presence: true
+	validates :name, :address, :description, presence: true
 	validates :name, length: { minimum: 3 }
 	validates :name, uniqueness: { case_sensitive: false }
 	
