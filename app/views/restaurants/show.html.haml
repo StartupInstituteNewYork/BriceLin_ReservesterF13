@@ -23,7 +23,7 @@
 					= res.text_field :email, class: 'form-control'
 				.form-group
 					= res.label :res_date
-					= res.datetime_local_field :res_date, class: 'form-control'
+					= res.datetime_select :res_date, ampm: true, class: 'form-control'
 				.form-group
 					= res.label :message
 					= res.text_area :message, class: 'form-control'
