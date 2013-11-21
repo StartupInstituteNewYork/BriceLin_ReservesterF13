@@ -52,7 +52,7 @@ private
   def confirm_ownership
     restaurant = Restaurant.find(params[:id])
     if restaurant.owner != current_owner
-      redirect_to :show, notice: "You don't own this restaurant!"
+      redirect_to :back, notice: "You don't own this restaurant!"
     end
   end
 end
