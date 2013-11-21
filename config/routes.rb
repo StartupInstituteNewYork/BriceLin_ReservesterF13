@@ -1,12 +1,11 @@
 BriceReservester::Application.routes.draw do
-
+  root 'restaurants#index'
   devise_for :owners
 
   authenticated :owner do
     root 'owners#dashboard', as: 'authenticated_root'
+    mount Resque::Server, at: "/resque"
   end
-
-  root 'restaurants#index'
 
   resources :restaurants do
     resources :reservations

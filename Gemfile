@@ -9,6 +9,9 @@ gem 'haml'
 gem 'devise'
 gem 'parsley-rails'
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'redis-rails'
+gem 'resque', require: 'resque/server'
+gem 'resque_mailer'
 
 group :development, :test do
 	gem 'rspec-rails', '~> 2.0'
